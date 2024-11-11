@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Exploring the Alignment Landscape: LLMs and Geometric Deep Models in Protein Representation">
+    <meta name="keywords" content="MultiModal AI, AI for Science, Large Language Models, Explainable AI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exploring the Alignment Landscape: LLMs and Geometric Deep Models in Protein Representation</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/icon_fair.svg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- <div class="navbar-menu">
+          <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href="xxxxx">
+            <span class="icon">
+                <i class="fas fa-home"></i>
+            </span>
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More Research
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="https://hypernerf.github.io">
+                  HyperNeRF
+                </a>
+                <a class="navbar-item" href="https://nerfies.github.io">
+                  Nerfies
+                </a>
+                <a class="navbar-item" href="https://latentfusion.github.io">
+                  LatentFusion
+                </a>
+                <a class="navbar-item" href="https://photoshape.github.io">
+                  PhotoShape
+                </a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title " style="color: hsl(205, 100%, 38%);">Exploring the Alignment Landscape: LLMs and Geometric Deep Models in Protein Representation</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="https://tizzzzy.github.io/dongshu.github.io//">Dong Shu</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://www.biology.pitt.edu/person/bingbing-duan">Bingbing Duan</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=v6jYru8AAAAJ">Kai Guo</a><sup>3</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://kaixiong-zhou.github.io/">Kaixiong Zhou</a><sup>4</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://www.cse.msu.edu/~tangjili/">Jiliang Tang</a><sup>3</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://mengnandu.com/">Mengnan Du</a><sup>5</sup>,
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Northwestern University,</span>
+                            <span class="author-block"><sup>2</sup>University of Pittsburgh,</span>
+                            <span class="author-block"><sup>3</sup>Michigan State University,</span>
+                            <span class="author-block"><sup>4</sup>North Carolina State University,</span>
+                            <span class="author-block"><sup>5</sup>New Jersey Institute of Technology</span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/2411.05316"
+                                       class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <!-- PDF Link. -->
+                                <!-- <span class="link-block">
+                                    <a href="./static/figs/CIKM-lawllm_pre.pdf"
+                                       class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>PowerPoint</span>
+                                    </a>
+                                </span> -->
+                                <!-- Video Link. -->
+                                <!-- <span class="link-block">
+                                  <a href="TBC_video"
+                                     class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-youtube"></i>
+                                    </span>
+                                    <span>Poster</span>
+                                  </a>
+                                </span> -->
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/Tizzzzy/LLM-GDM-alignment"
+                                       class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <!-- Dataset Link. -->
+                                <!-- <span class="link-block"> -->
+                                <!-- <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                  <span class="icon">
+                                      <i class="far fa-images"></i>
+                                  </span>
+                                  <span>Data</span>
+                                  </a> -->
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Workflow. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-five-fifths">
+                    <!-- <div class="columns is-centered"> -->
+                        <img src="./static/figs/overview.png" width="80%">
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abstract -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3" style="color: hsl(205, 100%, 38%);">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Latent representation alignment has become a foundational technique for constructing multimodal large language models (MLLM) by mapping embeddings from different modalities into a shared space, often aligned with the embedding space of large language models (LLMs) to enable effective cross-modal understanding. While preliminary protein-focused MLLMs have emerged, they have predominantly relied on heuristic approaches, lacking a fundamental understanding of optimal alignment practices across representations. In this study, we explore the alignment of multimodal representations between LLMs and Geometric Deep Models (GDMs) in the protein domain. We comprehensively evaluate three state-of-the-art LLMs (Gemma2-2B, LLaMa3.1-8B, and LLaMa3.1-70B) with four protein-specialized GDMs (GearNet, GVP, ScanNet, GAT). Our work examines alignment factors from both model and protein perspectives, identifying challenges in current alignment methodologies and proposing strategies to improve the alignment process. Our key findings reveal that GDMs incorporating both graph and 3D structural information align better with LLMs, larger LLMs demonstrate improved alignment capabilities, and protein rarity significantly impacts alignment performance. We also find that increasing GDM embedding dimensions, using two-layer projection heads, and fine-tuning LLMs on protein-specific data substantially enhance alignment quality. These strategies offer potential enhancements to the performance of protein-related multimodal models.
+                        </p>
+                        <p>
+                            <b>Keywords:</b> MultiModal AI, AI for Science, Large Language Models, Explainable AI
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3" style="color: hsl(205, 96%, 21%);">Model Perspective Analysis</h2>
+                    <h4 class="title is-3" style="color: hsl(205, 100%, 38%);">Research Question 1:</h4>
+                    <div class="content has-text-justified">
+
+                        <div class="columns is-centered">
+                            <img src="./static/figs/RQ1.png" width="100%">
+                        </div>
+                    </div>
+                    <div class="content has-text-justified">
+                        <p>
+                            <strong>Which LLM-GDM model pairs demonstrate the best alignment performance?</strong> We explored which pairs of LLMs and GDMs achieve better alignment. We found that GDMs capable of learning not only from the graph structure of proteins but also from their 3D geometric information tend to align more effectively with LLMs.
+                            Additionally, LLMs with higher embedding dimensions consistently demonstrated better alignment with GDMs. 
+                        </p>
+
+                    </div>
+
+                    <h4 class="title is-3" style="color: hsl(205, 100%, 38%);">Research Question 2:</h4>
+                    <div class="content has-text-justified">
+
+                        <div class="columns is-centered">
+                            <img src="./static/figs/RQ2.png" width="100%">
+                        </div>
+                    </div>
+                    <div class="content has-text-justified">
+                        <p>
+                            <strong>Is there a correlation between different model pairs?</strong> We observed that model pairs with strong alignment tend to have higher correlation with other high-performing model pairs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3" style="color: hsl(205, 96%, 21%);">Protein Perspective Analysis</h2>
+                    <h4 class="title is-3" style="color: hsl(205, 100%, 38%);">Research Question 3:</h4>
+                    <div class="content has-text-justified">
+
+                        <div class="columns is-centered">
+                            <img src="./static/figs/RQ3.png" width="100%">
+                        </div>
+                    </div>
+                    <div class="content has-text-justified">
+                        <p>
+                            <strong>What types of proteins align well across all model pairs, and which do not?</strong> We discovered that popular proteins are generally easier to align across model pairs, whereas rare proteins present greater challenges in achieving alignment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3" style="color: hsl(205, 96%, 21%);">Strategies for Improvement</h2>
+                    <h4 class="title is-3" style="color: hsl(205, 100%, 38%);">Research Question 4:</h4>
+                    <div class="content has-text-justified">
+
+                        <div class="columns is-centered">
+                            <img src="./static/figs/RD4.png" width="100%">
+                        </div>
+                    </div>
+                    <div class="content has-text-justified">
+                        <p>
+                            <strong>Does increasing the GDM dimension improve alignment performance?</strong> Our findings indicate that increasing the embedding dimension size of a GDM enhances its alignment with LLMs.
+                        </p>
+
+                    </div>
+
+                    <h4 class="title is-3" style="color: hsl(205, 100%, 38%);">Research Question 5:</h4>
+                    <div class="content has-text-justified">
+
+                        <div class="columns is-centered">
+                            <img src="./static/figs/RD5.png" width="100%">
+                        </div>
+                    </div>
+                    <div class="content has-text-justified">
+                        <p>
+                            <strong>Does adding layers to the GDM's projection head enhance alignment performance?</strong> Adding an extra linear layer to the GDM's projection head can significantly improve alignment performance, though this improvement stopped after two layers, suggesting diminishing returns with further complexity.
+                        </p>
+
+                    </div>
+
+                    <h4 class="title is-3" style="color: hsl(205, 100%, 38%);">Research Question 6:</h4>
+                    <div class="content has-text-justified">
+
+                        <div class="columns is-centered">
+                            <img src="./static/figs/RD6.png" width="100%">
+                        </div>
+                    </div>
+                    <div class="content has-text-justified">
+                        <p>
+                            <strong>Does fine-tuning an LLM on protein data enhance alignment performance?</strong> Another key insight is that fine-tuning LLMs with protein-specific knowledge can lead to better alignment with GDMs, highlighting the value of domain-specific adaptation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+        </div>
+    </section>
+    
+
+    <!-- journal={arXiv preprint arXiv:2408.09757}, -->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title" style="color: hsl(205, 100%, 38%);">BibTeX</h2>
+            <pre><code>
+@misc{shu2024exploringalignmentlandscapellms,
+    title={Exploring the Alignment Landscape: LLMs and Geometric Deep Models in Protein Representation}, 
+    author={Dong Shu and Bingbing Duan and Kai Guo and Kaixiong Zhou and Jiliang Tang and Mengnan Du},
+    year={2024},
+    eprint={2411.05316},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG},
+    url={https://arxiv.org/abs/2411.05316}, 
+}
+            </code></pre>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <!-- <div class="content has-text-centered">
+              <a class="icon-link"
+                 href="./static/videos/nerfies_paper.pdf">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+              <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+                <i class="fab fa-github"></i>
+              </a>
+            </div> -->
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website is licensed under a <a rel="license"
+                                                                href="http://creativecommons.org/licenses/by-sa/4.0/">
+                                Creative
+                                Commons Attribution-ShareAlike 4.0 International License
+                            </a>.
+                            We thank the website template from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
